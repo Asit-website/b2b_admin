@@ -1,13 +1,261 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*{
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: 'Wix Madefor Display', sans-serif !important;
+}
+@import url('https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@400;500;600&display=swap');
+body{
+  overflow-x: hidden;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.flash_bg{
+  background-image: url('./img/splash.svg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+}
+.login_type{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.login_type{
+  background-color: #F4FAFF;
+}
+.auth_left{
+  width: 45%;
+  height: 100vh;
+  background-color: #285F74;
+}
+.auth_right{
+  width: 55%;
+  height: 100vh;
+}
+.auth_bg{
+  background-image: url('./img/hihj.svg');
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  background-repeat: no-repeat;
+  height: 100vh;
+  padding: 0px 30px;
+}
+.spalsh_icon img{
+  width: 100%;
+  max-width: 280px;
+  /* height: 100vh; */
+  position: absolute;
+  bottom: 0px;
+  /* bottom: 0px; */
+}
+.auth_bg h3{
+  color: #FFFFFF;
+  font-weight: bold;
+  font-size: 33px;
+  display: inline-block;
+  margin-top: 20px;
+  margin-left: 50px;
+}
+.auth_bg span{
+  font-weight: 400;
+}
+.form_inp input{
+  display: block;
+}
+.form_right{
+  background-image: url('./img/lininj.svg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  background-repeat: no-repeat;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.form_right h3{
+  color: #181C32;
+  font-weight: bold;
+  font-size: 32px;
+  margin-top: 40px;
+}
+.form_inp{
+  margin-top: 20px;
+}
+.form_inp input{
+  border: 1px solid #D9E0E6;
+  background-color: #FFFFFF;
+  width: 400px;
+  max-width: 100%;
+  height: 64px;
+  max-height: 100%;
+  outline: none;
+  border-radius: 6px;
+  padding: 0px 50px;
+  margin: 20px 0px;
+}
+.forgot p{
+  text-align: center;
+  text-decoration: underline;
+  margin-top: 30px;
+  color: #5E6278;
+  font-weight: 400;
+  font-size: 17px;
+}
+.login{
+  background-color: #285F74;
+  max-width: 400px;
+  width: 100%;
+  height: 64px;
+  color: #FFFFFF;
+  font-weight: 600;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  margin-top: 30px;
+}
+.terms{
+  text-align: center;
+  color: #98A4B0;
+  font-weight: 500;
+  font-size: 16px;
+  margin-top: 35px;
+}
+.t_inp{
+  position: relative;
+}
+.t_inp img{
+  position: absolute;
+  left: 22px;
+}
+.t_inp .vect{
+  top: 24px;
+}
+.t_inp .vect1{
+  top: 20px;
+}
+.welcome_page{
+ background-color: #285F74;
+ position: relative;
+ width: 100%;
+ height: 100vh;
+}
+.welcome_sect{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.welcome_sect h3{
+  color: white;
+  font-weight: 600;
+  font-size: 35px;
+  text-align: center;
+}
+.welcome_sect span{
+  font-weight: 400;
+  font-size: 30px;
+  text-decoration: underline;
+}
+.log_btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+.log_btn button{
+  padding: 10px 24px;
+  border: none;
+  font-size: 20px;
+  margin: 30px 10px;
+  background-color: #00A0AE;
+  border-radius: 5px;
+  color: white;
+}
+
+.otp_screen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.otp_screen .signin_input {
+  margin-right: 10px;
+}
+
+.otp_screen input {
+  height: 74px;
+  max-height: 100%;
+  max-width: 74px;
+  width: 100%;
+  border: 1px solid #82868C !important;
+  color: #1D212E !important;
+  font-weight: bold;
+  font-size: 36px;
+  text-align: center;
+  padding: 0px 0px !important;
+}
+
+.otp_screen input::placeholder {
+  color: #1D212E;
+  font-weight: bold;
+  font-size: 40px;
+  text-align: center;
+}
+.verify_again {
+  margin-top: 30px;
+}
+
+.verify_again p {
+  text-align: center;
+  color: #74788D;
+  font-weight: 400;
+  font-size: 16px;
+}
+.verify_again span {
+  color: #161B22;
+  text-decoration: underline;
+}
+.lofin{
+  display: block;
+  margin: auto;
+}
+.send{
+  width: 80px;
+  height: 80px;
+  /* object-fit: cover; */
+}
+.singing a{
+  margin: 0px 15px;
+  width: 100%;
+}
+.hj input,
+.hj textarea{
+  height:50px ;
+}
+.ui{
+  justify-content: center;
+}
+.ui a{
+  margin: 10px 10px;
+  width: 100%;
+}
+.trsh{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.trsh span{
+  font-weight: 600;
+  font-size: 20px;
 }
